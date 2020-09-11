@@ -1,2 +1,2 @@
-# GHC2020_Automated_Session_Signup
-searches for open sessions for the vGrace Hopper Celebration 2020
+# GHC2020 Automated Session Signup
+This tool searches for open sessions for the virtual Grace Hopper Celebration 2020.
