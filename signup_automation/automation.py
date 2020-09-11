@@ -1,11 +1,9 @@
-import selenium
-
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options
 
 
 def login():
-    #website
+    # website
 
     # opts = Options()
     # opts.set_headless()
@@ -17,15 +15,17 @@ def login():
 
 
 def get_to_session_page():
-# click thru 3x (?)
+    # click thru 3x (?)
     print('session list')
 
 # fill in sessions.ini
 
+
 def search_availability(session_name):
-# sarch for seimar page for availability
-# add results to df
+    # sarch for seimar page for availability
+    # add results to df
     print('searching for sessions')
+
 
 def send_email():
     # send ( p r e t t y ) email if session available/not available
@@ -33,10 +33,12 @@ def send_email():
 
 # lint code
 
+
 def main():
     login()
     get_to_session_page()
     search_availability('INSERT_SESSION_NAME')
     send_email()
+
 
 main()
