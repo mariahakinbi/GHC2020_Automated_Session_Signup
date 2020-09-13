@@ -1,12 +1,8 @@
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.webdriver.support import expected_conditions
 
 import time
 
@@ -45,15 +41,12 @@ def get_to_session_page():
         EC.element_to_be_clickable((By.XPATH, "//span[.='Modify Registration']")))
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     modify_reg_elem.click()
-    
-
     # personal info
     time.sleep(5)
     next_btn = WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.ID, "forward")))
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     next_btn.click()
-    
     # registration items
     time.sleep(5)
     # wait.until(EC.refreshed(EC.stalenessOf("forward")));
